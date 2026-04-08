@@ -1,0 +1,6 @@
+aiogram
+playwright
+beautifulsoup4
+requests
+python-dotenv
+apscheduler
