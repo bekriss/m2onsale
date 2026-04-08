@@ -5,6 +5,7 @@ import os
 
 from handlers import router
 from database import create_tables
+from scraper_runner import start_scheduler  # <-- import
 
 load_dotenv()
 
@@ -15,6 +16,7 @@ dp.include_router(router)
 
 async def main():
     create_tables()
+    start_scheduler()  # <-- start the scraping scheduler
     print("Bot started")
     await dp.start_polling(bot)
 
